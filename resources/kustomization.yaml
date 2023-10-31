@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+resources:
+  - 00_rhacs-operator_namespace.yaml
+  - 01_rhacs-operator_subscription.yaml
+  - 02_rhacs_rbac.yaml
+  - 02_stackrox_namespace.yaml
+  - 03_stackrox-central-services.yaml
+  - 04_stackrox_initbundle.yaml
+  - 05_stackrox_secure-cluster.yaml

@@ -1,0 +1,25 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: advance-cluster-security
+  namespace: openshift-gitops
+spec:
+  generators:
+  - clusters: {} 
+  template:
+    metadata:
+      name: advance-cluster-security-{{name}}
+    spec:
+      project: advance-cluster-security
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/Everything-is-Code/advance-cluster-security.git
+        targetRevision: main
+        path: resources/
+      destination:
+        server: https://kubernetes.default.svc
+
