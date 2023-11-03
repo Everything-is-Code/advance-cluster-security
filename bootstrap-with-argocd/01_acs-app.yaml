@@ -6,7 +6,9 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - clusters: {} 
+  - clusters: 
+     selector:
+      name: in-cluster
   template:
     metadata:
       name: advance-cluster-security-{{name}}
