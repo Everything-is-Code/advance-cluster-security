@@ -20,6 +20,7 @@ rules:
       - platform.stackrox.io
     resources:
       - securedcluster
+      - central
     verbs:
       - get
       - list
