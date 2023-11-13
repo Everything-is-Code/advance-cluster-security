@@ -3,5 +3,6 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
+- 000_crb-sa-gitops.yaml
 - 00_acs-appproject.yaml
 - 01_acs-app.yaml
