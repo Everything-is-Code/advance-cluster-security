@@ -8,7 +8,7 @@ metadata:
   labels:
     operators.coreos.com/rhacs-operator.rhacs-operator: ''
 spec:
-  channel: 4.3
+  channel: "4.3"
   installPlanApproval: Automatic
   name: rhacs-operator
   source: redhat-operators
