@@ -2,6 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
   name: advance-cluster-security
   namespace: openshift-gitops
 spec:
