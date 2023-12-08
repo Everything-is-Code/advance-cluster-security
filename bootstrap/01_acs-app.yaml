@@ -8,12 +8,12 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - clusters: 
-     selector:
-      name: in-cluster
+  - list:
+      elements:
+      - cluster: in-cluster
   template:
     metadata:
-      name: advance-cluster-security-{{name}}
+      name: advance-cluster-security-{{cluster}}
     spec:
       project: advance-cluster-security
       syncPolicy:
