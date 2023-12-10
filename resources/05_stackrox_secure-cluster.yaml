@@ -7,9 +7,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "5"
 spec:
   admissionControl:
+    bypass: BreakGlassAnnotation
+    contactImageScanners: ScanIfMissing
     listenOnCreates: true
     listenOnEvents: true
     listenOnUpdates: true
+    replicas: 3
+    timeoutSeconds: 20
   clusterName: local-cluster
   perNode:
     collector:
