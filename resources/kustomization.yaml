@@ -10,4 +10,3 @@ resources:
   - 03_stackrox-central-services.yaml
   - 04_stackrox_initbundle.yaml
   - 05_stackrox_secure-cluster.yaml
-  - 06_securedcluster.yaml
